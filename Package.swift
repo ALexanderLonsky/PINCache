@@ -32,16 +32,6 @@ let package = Package(
             exclude: ["Carthage", "docs",
                       "build_docs.sh", "Cartfile",
                       "Cartfile.resolved", "Makefile",
-                      "PINCache.podspec", "Info.plist"],
-            publicHeadersPath: "."),
-        .testTarget(
-            name: "PINCacheTests",
-            dependencies: ["PINCache"],
-            path: "Tests",
-            exclude: ["Info.plist"],
-            resources: [.process("Default-568h@2x.png")],
-            cSettings: [
-                .define("TEST_AS_SPM"),
-            ]),
+                      "PINCache.podspec", "Info.plist"]),
     ]
 )
